@@ -20,7 +20,7 @@ const generateDoctorsData = () => {
       name: `Dr. ${casual.last_name}`,
       city: casual.random_element(cities), 
       age: casual.integer(30, 65),
-      expertise: casual.random_element(['Orthopedic Surgeon', 'Cardiologist', 'Dermatologist', 'Pediatrician']), // Randomly select an expertise
+      expertise: casual.random_element(['Orthopedic Surgeon', 'Cardiologist', 'Dermatologist', 'Pediatrician']), 
     
     };
 
