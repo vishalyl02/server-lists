@@ -4,7 +4,7 @@ const app = express();
 const port = 3002;
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your React app's URL
+  origin: 'http://localhost:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
@@ -18,10 +18,10 @@ const generateDoctorsData = () => {
     const doctor = {
       id: i,
       name: `Dr. ${casual.last_name}`,
-      city: casual.random_element(cities), // Randomly select a city from the list
-      age: casual.integer(30, 65), // Generate a random age between 30 and 65
+      city: casual.random_element(cities), 
+      age: casual.integer(30, 65),
       expertise: casual.random_element(['Orthopedic Surgeon', 'Cardiologist', 'Dermatologist', 'Pediatrician']), // Randomly select an expertise
-      // Add more fields as needed
+    
     };
 
     doctors.push(doctor);
